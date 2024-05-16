@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Ranking</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .controls label,
+        .controls select,
+        .controls input,
+        .controls button {
+            margin: 0 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .timedate,
+        .loading {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Character BP Ranking</h1>
+        </div>
+        <div class="controls">
+            <div>
+                <label for="characterSelect">キャラクターを選択:</label>
+                <select id="characterSelect">
+                    <option value="">全キャラクター</option>
+                </select>
+            </div>
+            <div>
+                <input type="checkbox" id="unlimited"> 全ワールド<br>
+                <input type="number" id="startRange" placeholder="開始範囲">
+                <input type="number" id="endRange" placeholder="終了範囲">
+                <button id="loadDataButton">データを読み込む</button>
+            </div>
+        </div>
+        <div class="timedate"></div>
+        <div class="loading"></div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Rank</th>
+                    <th>Character</th>
+                    <th>BP</th>
+                    <th>World</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <section class="caution">
+            <h2>注意書き</h2>
+            <p>＊JPサーバーを検索しています</p>
+            <p>＊バトルリーグTOP20以内プレイヤーのキャラのみ適用されます</p>
+            <p>＊情報は完全に正確なものではありません、参考程度にお楽しみください</p>
+            <p>＊読み込むデータが多いため、ネット環境が良い状態でお使いください</p>
+            <p>＊以下のサイトの提供APIを使用して作成されています。<a href="https://mentemori.icu/">https://mentemori.icu/</a></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

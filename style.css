@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 2 2 1px rgba(0, 0, 0, 0.1);
+    
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1{
+    
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* .controls #unlimited{
+    width: 100%;
+    margin: 50px;
+} */
+
+.controls #startRange,.controls #endRange{
+    width: 50%;
+}
+
+.controls label,
+.controls select,
+.controls input,
+.controls button {
+    margin: 5px 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.timedate,
+.loading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.caution{
+    background-color: #f9f9f9;
+    border: solid 1px #2b1a05;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+
+}
+
+.caution h2{
+    width: 100%;
+    line-height: 20px;
+}
+
+.caution p{
+    width: 100%;
+    line-height: 3px;
+}
+
+
+
+
+@media screen and (max-width:750px) {
+    .controls #startRange,.controls #endRange{
+        width: 80%;
+    }
+};
+
