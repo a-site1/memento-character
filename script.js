@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         79: '',
         80: '',
         81: '',
-        82: '',
+        82: 'アレクサンドラ',
         83: '',
         84: 'リズ',
         85: 'マチルダ',
