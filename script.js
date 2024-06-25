@@ -210,7 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadDataButton.addEventListener('click', loadData);
 
-    // チェックボックスをデフォルトチェック
     unlimitedCheckbox.checked = true;
     startRangeInput.disabled = true;
     endRangeInput.disabled = true;
