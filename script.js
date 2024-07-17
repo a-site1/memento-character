@@ -106,7 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
         93: '',
         94: '',
         95: '[夏]ニーナ',
-        96: ''
+        96: '',
+        1000: '1'
     };
 
     // プルダウンリストオプション
@@ -140,22 +141,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const displayRankingTable = (characters) => {
-        tableBody.innerHTML = '';  // テーブルクリア
-        const sortedCharacters = characters.sort((a, b) => b.BattlePower - a.BattlePower); // バトルパワーで降順ソート
-        sortedCharacters.slice(0, 100).forEach((character, index) => {
-            const name = characterNames[character.CharacterId] || 'Unknown';
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${character.PlayerName}</td>
-                <td>${index + 1 + "位" }</td>
-                <td>${name}</td>
-                <td>${character.BattlePower}</td>
-                <td>${character.UrlNumber}</td>
-            `;
-            tableBody.appendChild(row);
-        });
-    };
+const displayRankingTable = (characters) => {
+    tableBody.innerHTML = '';  
+    const sortedCharacters = characters.sort((a, b) => b.BattlePower - a.BattlePower); 
+    sortedCharacters.forEach((character, index) 
+        const name = characterNames[character.CharacterId] || 'Unknown';
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${character.PlayerName}</td>
+            <td>${index + 1 + "位" }</td>
+            <td>${name}</td>
+            <td>${character.BattlePower}</td>
+            <td>${character.UrlNumber}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+};
+
 
     const updateAccessTime = () => {
         const currentTime = new Date();
