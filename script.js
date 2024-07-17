@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const unlimitedCheckbox = document.querySelector('#unlimited');
     const characterSelect = document.querySelector('#characterSelect');
 
-    
     // キャラクターIDと名前のマッピング
     const characterNames = {
         1: 'モニカ',
@@ -140,23 +139,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-const displayRankingTable = (characters) => {
-    tableBody.innerHTML = '';  
-    const sortedCharacters = characters.sort((a, b) => b.BattlePower - a.BattlePower); 
-    sortedCharacters.forEach((character, index) 
-        const name = characterNames[character.CharacterId] || 'Unknown';
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${character.PlayerName}</td>
-            <td>${index + 1 + "位" }</td>
-            <td>${name}</td>
-            <td>${character.BattlePower}</td>
-            <td>${character.UrlNumber}</td>
-        `;
-        tableBody.appendChild(row);
-    });
-};
-
+    const displayRankingTable = (characters) => {
+        tableBody.innerHTML = '';  // テーブルクリア
+        const sortedCharacters = characters.sort((a, b) => b.BattlePower - a.BattlePower); // バトルパワーで降順ソート
+        sortedCharacters.forEach((character, index) => { // ここで制限を外す
+            const name = characterNames[character.CharacterId] || 'Unknown';
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${character.PlayerName}</td>
+                <td>${index + 1 + "位" }</td>
+                <td>${name}</td>
+                <td>${character.BattlePower}</td>
+                <td>${character.UrlNumber}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    };
 
     const updateAccessTime = () => {
         const currentTime = new Date();
