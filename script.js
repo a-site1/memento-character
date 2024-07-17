@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const unlimitedCheckbox = document.querySelector('#unlimited');
     const characterSelect = document.querySelector('#characterSelect');
 
+    
     // キャラクターIDと名前のマッピング
     const characterNames = {
         1: 'モニカ',
