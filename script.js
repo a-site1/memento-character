@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         93: '',
         94: '',
         95: '[夏]ニーナ',
-        96: ''
+        96: '[夏]アムレート'
     };
 
     // プルダウンリストオプション
