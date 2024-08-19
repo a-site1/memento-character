@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         77: 'ミナシュマリ',
         78: 'アサヒ',
         79: '',
-        80: '',
+        80: 'ミラ',
         81: '',
         82: 'アレクサンドラ',
         83: '',
