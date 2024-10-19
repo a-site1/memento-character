@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         83: 'a',
         84: 'リズ',
         85: 'マチルダ',
-        86: '',
+        86: 'メリア',
         87: '',
         88: '[使徒]ロザリー',
         89: '',
